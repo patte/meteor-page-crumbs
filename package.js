@@ -11,7 +11,6 @@ Package.onUse(function(api) {
   api.use('ecmascript');
   api.use(['livedata', 'underscore', 'deps', 'templating', 'ui', 'blaze', 'ejson', 'reactive-var', 'reactive-dict', 'random', 'jquery', 'less'], 'client');
   api.use(['coffeescript', 'check'], ['client', 'server']);
-
   api.use('chuangbo:marked@0.3.5_1', 'client');
   api.use('jeremy:ghostdown@0.4.3', 'client');
   api.use('iron:router@1.0.12', ['client', 'server']);
@@ -21,6 +20,7 @@ Package.onUse(function(api) {
   api.addFiles('shared/collections/crumbs.coffee', ['client', 'server']);
   api.addFiles('shared/collections/posts.coffee', ['client', 'server']);
   api.addFiles('shared/router.coffee', ['client', 'server']);
+  api.addFiles('server/publications.coffee', 'server');
   api.addFiles('client/views/crumbs/crumb.html', 'client');
   api.addFiles('client/views/posts/post.html', 'client');
   api.addFiles('client/views/posts/posts.html', 'client');
@@ -32,6 +32,7 @@ Package.onUse(function(api) {
   api.addFiles('client/lib/readmore.min.js', 'client');
   api.addFiles('client/stylesheets/crumbs.less', 'client');
   api.addFiles('client/stylesheets/posts.less', 'client');
+
 });
 
 Package.onTest(function(api) {
